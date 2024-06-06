@@ -1,4 +1,4 @@
-
+import "../src/App.css"
 import {NavLink,Outlet} from 'react-router-dom'
 
 
@@ -11,7 +11,11 @@ const Accueil = () => {
     <header className='header'>
     <nav className='nav'>
         <ul>
-        <NavLink to="/" className={({ isActive }) => isActive ? 'active' : undefined}>accueil</NavLink>
+            
+ <NavLink 
+    to="/" 
+    className={({ isActive }) => isActive ? 'active' : undefined}
+  >accueil</NavLink>
         </ul>    
    
 
