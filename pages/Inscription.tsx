@@ -35,7 +35,7 @@ const Inscription: React.FC = () => {
       const response = await axios.post(URL.SIGNUP, user); // Utilisation de axios avec une URL définie
       console.log(response);
     } catch (error) {
-      setErrorMessage(error.response.data.message);
+      setErrorMessage(error.response);
     }
   };
 

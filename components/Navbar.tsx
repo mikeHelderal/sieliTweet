@@ -11,7 +11,10 @@ const Navbar = () => {
             </ul>
             <ul>
                 <NavLink to="/inscription" className={({ isActive }) => isActive ? 'active' : undefined}>inscription</NavLink>
-            </ul>    
+            </ul>
+            <ul>
+                <NavLink to="/connexion" className={({ isActive }) => isActive ? 'active' : undefined}>connexion</NavLink>
+            </ul>     
         </nav>
         <main>
         <Outlet/>
