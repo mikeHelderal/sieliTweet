@@ -17,7 +17,11 @@ const Navbar = () => {
             </ul>
             <ul>
                 <NavLink to="/follow" className={({ isActive }) => isActive ? 'active' : undefined}>follow</NavLink>
-            </ul>      
+            </ul> 
+            <ul>     
+                <NavLink to="/tweet" className={({ isActive }) => isActive ? 'active' : undefined}>tweet</NavLink>
+            </ul>
+
         </nav>
         <main>
         <Outlet/>

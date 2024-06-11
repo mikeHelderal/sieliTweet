@@ -5,6 +5,7 @@ import Inscription from '../pages/Inscription'
 import Accueil from '../pages/Accueil'
 import Connexion from '../pages/Connexion'
 import Follow from '../pages/Follow'
+import Tweet from '../pages/Tweet';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/follow" element={<Follow />} />
+          <Route path="/tweet" element={<Tweet />} />
+
+
         </Route>
       </Routes>
     </BrowserRouter>

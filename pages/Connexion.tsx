@@ -10,12 +10,12 @@ import { useNavigate, redirect } from 'react-router-dom';
 
 
 const Connexion = () => {
-   const navigate = useNavigate();
+    const navigate = useNavigate();
     const [user, setUser] = useState({});
     const dispatch = useDispatch();
     let validation: boolean = false ;
 
-   
+
 
 
     const handleChange = (e: any) => {
@@ -34,21 +34,22 @@ const Connexion = () => {
                 
                  dispatch(ACTION.FETCH_SUCCES(response.data));
                  /* utiliser de préférence navigate plutot que window.location... */
-                 navigate("/");
-                 console.log(response)
+                console.log("avant redirection");
+                navigate("/");
+                console.log(response)
     
             } catch (error: any) {
-                console.log(error.response.data);
+                console.log(error);
                 //dispatch(ACTION.FETCH_FAILLURE());
-                if(error.response.data.message == "user not found"){
-                    alert("utilisateur introuvable veuillez vous inscrire");
-                }
+                //if(error.response.data.mess == "user not found"){
+                //    alert("utilisateur introuvable veuillez vous inscrire");
+                //}
             }
         }
         enregistrer();
         
     }
-  return (
+    return (
     <div>
         <form onSubmit={connexion} >
                 <label htmlFor="email" >Email :</label>
@@ -58,7 +59,7 @@ const Connexion = () => {
                 <button>Connexion</button>
             </form>
     </div>
-  )
+    )
 }
 
 export default Connexion
