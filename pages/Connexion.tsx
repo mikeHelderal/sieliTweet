@@ -30,6 +30,8 @@ const Connexion = () => {
         const enregistrer = async () => {
             try {
                 const response = await axios.post(URL.LOGIN, user);
+                console.log(response);
+                
                  dispatch(ACTION.FETCH_SUCCES(response.data));
                  /* utiliser de préférence navigate plutot que window.location... */
                  navigate("/");

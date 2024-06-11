@@ -14,7 +14,10 @@ const Navbar = () => {
             </ul>
             <ul>
                 <NavLink to="/connexion" className={({ isActive }) => isActive ? 'active' : undefined}>connexion</NavLink>
-            </ul>     
+            </ul>
+            <ul>
+                <NavLink to="/follow" className={({ isActive }) => isActive ? 'active' : undefined}>follow</NavLink>
+            </ul>      
         </nav>
         <main>
         <Outlet/>
