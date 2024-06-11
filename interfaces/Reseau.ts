@@ -6,7 +6,7 @@ password: string,
 
 // V2 
 export interface Reseaux {
-userId: number;
+_id: number;
 token: string,
 }
 
@@ -15,4 +15,9 @@ export type RootState = {
   todo: {
     data: Reseaux[]
   }
+}
+
+export type TweetType = {
+  id_user: string,
+  contenu: string
 }

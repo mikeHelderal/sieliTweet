@@ -29,18 +29,21 @@ const Connexion = () => {
         dispatch(ACTION.FETCH_START());
         const enregistrer = async () => {
             try {
-                const response = await axios.post(URL.LOGIN, user);
+                const response = await axios.post(URL.LOGIN, user, {withCredentials: true});
+                console.log("response axios =< ",response);
+
                 dispatch(ACTION.FETCH_SUCCES(response.data));
                  /* utiliser de préférence navigate plutot que window.location... */
+                console.log("avant redirection");
                 navigate("/");
                 console.log(response)
     
             } catch (error: any) {
-                console.log(error.response.data);
+                console.log(error);
                 //dispatch(ACTION.FETCH_FAILLURE());
-                if(error.response.data.message == "user not found"){
-                    alert("utilisateur introuvable veuillez vous inscrire");
-                }
+                //if(error.response.data.mess == "user not found"){
+                //    alert("utilisateur introuvable veuillez vous inscrire");
+                //}
             }
         }
         enregistrer();
