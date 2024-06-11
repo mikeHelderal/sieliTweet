@@ -29,6 +29,7 @@ const Connexion = () => {
         dispatch(ACTION.FETCH_START());
         const enregistrer = async () => {
             try {
+                console.log("avant axios");
                 const response = await axios.post(URL.LOGIN, user, {withCredentials: true});
                 console.log("response axios =< ",response);
 
